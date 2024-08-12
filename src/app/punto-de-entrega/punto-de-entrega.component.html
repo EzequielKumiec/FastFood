@@ -1,0 +1,10 @@
+<p>Pedidos listos para entregar</p>
+<ul>
+<li *ngFor="let listaNivel1 of listaDePedidosTerminados" class="list-group-item">
+    <div *ngFor="let list of listaNivel1">
+        {{list.numero}} - {{ list.nombre }}
+        <button (click)="terminarPedido(listaNivel1)">Entregar</button>
+    </div>
+</li>
+
+</ul>

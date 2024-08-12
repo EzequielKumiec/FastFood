@@ -1,0 +1,15 @@
+<h1>Componente Cocina</h1>
+
+<b><h3>Pendiente de Cocinar</h3></b>
+
+<li *ngFor="let lista of listas" class="list-group-item">
+    ({{lista.numero}}) - {{lista.descripcion}} 
+    <button (click)="cocinarPedido(lista)" *ngIf="listaPedidoCocinando.length < 1">Cocinar</button>
+</li> 
+
+<b><h3>Pedidos en coccion</h3></b>
+<li *ngFor="let lista of listaPedidoCocinando" class="list-group-item">
+    ({{lista.numero}}) {{lista.nombre}} - {{lista.descripcion}} 
+</li> 
+
+<button *ngIf="listaPedidoCocinando.length >= 1" (click)="onEnviarPedidoTerminado()">Pedido terminado</button>

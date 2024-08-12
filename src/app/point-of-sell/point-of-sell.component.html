@@ -1,0 +1,7 @@
+<h3>POS - Point of Sell</h3>
+
+<h3>Componente Point of Sell - POS</h3>
+
+<p>Nombre: </p><input type="text" [value]="nombre"(input)="onNombre($event)">
+<p>Pedido: </p><input type="text" [value]="descripcion"(input)="onDescripcion($event)">
+<button (click)="enviar()">Ordenar</button>

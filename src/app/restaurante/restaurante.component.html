@@ -1,0 +1,9 @@
+
+<h2>Restaurante FastFood</h2>
+<p>Pedidos ingresados</p>
+<p>{{lista | json}}</p>
+
+
+<app-punto-de-entrega [listaDePedidosTerminados]="listaDePedidosTerminados"></app-punto-de-entrega>
+<app-point-of-sell (enviarLista)="onVerLista($event)"></app-point-of-sell>
+<app-cocina (enviarPedidoTerminado)="onListaTerminado($event)" [listas]="lista"></app-cocina>
